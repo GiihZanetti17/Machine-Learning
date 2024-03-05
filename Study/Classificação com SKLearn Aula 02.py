@@ -31,7 +31,12 @@ teste_y = y[75:]
 print("Treinaremos com %d elementos e testaremos com %d elementos" % (len(treino_x), len(teste_x)))
 
 from sklearn.svm import LinearSVC
+from sklearn.metrics import accuracy_score
 
 modelo = LinearSVC()
 modelo.fit(treino_x, treino_y)
 
+previsoes = modelo.predict(teste_x)
+
+acuracia = accuracy_score(teste_y, previsoes) *100
+print("A acurácia foi %.2f%%" % acuracia)
