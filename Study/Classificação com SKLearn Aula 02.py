@@ -5,7 +5,7 @@ uri = "https://gist.githubusercontent.com/guilhermesilveira/2d2efa37d66b6c84a722
 dados = pd.read_csv(uri)
 dados.head()
 
-mapa = {
+mapa = { # A função do Mapa é que ele é um dicionário para modificar as colunas, depois utilizar a função rename para renomear as colunas com as traduções necessárias.
     "home" : "principal",
     "how_it_works" : "como_funciona",
     "contact" : "contato",
