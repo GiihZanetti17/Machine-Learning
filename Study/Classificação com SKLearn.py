@@ -27,3 +27,19 @@ model.fit (dados, classe)
 
 animal_misterioso =[1,1,1]
 model.predict ([animal_misterioso])
+
+
+misterio1 = [1,1,1]
+misterio2 = [1,1,0]
+misterio3 = [0,1,1]
+
+teste = [misterio1, misterio2, misterio3]
+previsoes = model.predict (teste)
+
+teste_classe = [0,1,1]
+
+
+corretos = (previsoes == teste_classe).sum()
+total = len(teste)
+taxa_de_acerto = corretos/total
+print ("Taxa de acerto: ", taxa_de_acerto *100)
