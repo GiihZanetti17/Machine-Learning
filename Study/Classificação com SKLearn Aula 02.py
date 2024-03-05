@@ -29,3 +29,9 @@ teste_x = x[75:]
 teste_y = y[75:]
 
 print("Treinaremos com %d elementos e testaremos com %d elementos" % (len(treino_x), len(teste_x)))
+
+from sklearn.svm import LinearSVC
+
+modelo = LinearSVC()
+modelo.fit(treino_x, treino_y)
+
