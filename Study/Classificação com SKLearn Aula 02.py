@@ -3,7 +3,7 @@ import pandas as pd
 uri = "https://gist.githubusercontent.com/guilhermesilveira/2d2efa37d66b6c84a722ea627a897ced/raw/10968b997d885cbded1c92938c7a9912ba41c615/tracking.csv"
 
 dados = pd.read_csv(uri)
-dados.head()
+dados.head() #a função head imprime as 5 primeiras linhas.
 
 mapa = { # A função do Mapa é que ele é um dicionário para modificar as colunas, depois utilizar a função rename para renomear as colunas com as traduções necessárias.
     "home" : "principal",
