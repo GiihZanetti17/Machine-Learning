@@ -36,7 +36,7 @@ from sklearn.metrics import accuracy_score
 
 SEED = 20 #faz o nº inicial uma semente, fazendo-se que assim ele não fique dando os resultados da acurácia diferente, e sim o mesmo resultado.
 
-treino_x, teste_x, treino_y, teste_y = train_test_split(x, y, random_state = SEED ,test_size = 0.25)
+treino_x, teste_x, treino_y, teste_y = train_test_split(x, y, random_state = SEED ,test_size = 0.25, stratify = y) #stratify - mantem as proporções
 
 modelo = LinearSVC()
 modelo.fit(treino_x, treino_y)
@@ -47,5 +47,6 @@ acuracia = accuracy_score(teste_y, previsoes) *100
 print("A acurácia foi %.2f%%" % acuracia)
 print("Treinaremos com %d elementos e testaremos com %d elementos" % (len(treino_x), len(teste_x)))
 
-
+treino_y.value_counts() #Contamos quantas vezes tal número se repete
+teste_y.value_counts() #Contamos quantas vezes tal número se repete
 
